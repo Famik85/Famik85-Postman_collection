@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "418cf8ed-ceb2-46d6-beeb-42f6c96b3cdf",
+		"name": "UDEMI API TESTING",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tests",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//1. Correct response format JSON\r",
+							"pm.test(\"Correct response format JSON\", function() {\r",
+							"     pm.response.to.have.jsonBody()\r",
+							"});\r",
+							"\r",
+							"//2. We have all the declared fields in the response\r",
+							"pm.test(\"Check that we have all declared fields\", function() {\r",
+							"    const jsonData = pm.response.json();\r",
+							"\r",
+							"    pm.expect(jsonData).to.have.property(\"people\");\r",
+							"    pm.expect(jsonData).to.have.property(\"planets\");\r",
+							"    pm.expect(jsonData).to.have.property(\"films\");\r",
+							"    pm.expect(jsonData).to.have.property(\"species\");\r",
+							"    pm.expect(jsonData).to.have.property(\"vehicles\");\r",
+							"    pm.expect(jsonData).to.have.property(\"starships\");\r",
+							"});\r",
+							"\r",
+							"//3.Field value isn't NULL\r",
+							"pm.test(\"Check if value isn't NULL\", function() {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.people).not.equal(null);\r",
+							"    pm.expect(jsonData.planets).not.equal(null);\r",
+							"    pm.expect(jsonData.films).not.equal(null);\r",
+							"    pm.expect(jsonData.species).not.equal(null);\r",
+							"    pm.expect(jsonData.vehicles).not.equal(null);\r",
+							"    pm.expect(jsonData.starships).not.equal(null);\r",
+							"})\r",
+							"//4. Check if value isn't empty\r",
+							"pm.test(\"Check if value isn't empty\", function() {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.people).not.equal(\"\");\r",
+							"    pm.expect(jsonData.planets).not.equal(\"\");\r",
+							"    pm.expect(jsonData.films).not.equal(\"\");\r",
+							"    pm.expect(jsonData.species).not.equal(\"\");\r",
+							"    pm.expect(jsonData.vehicles).not.equal(\"\");\r",
+							"    pm.expect(jsonData.starships).not.equal(\"\");\r",
+							"})\r",
+							"\r",
+							"//5. Check if field corresponds to a specific value\r",
+							"pm.test(\"Check if field corresponds to a specific value\", function() {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.people).to.equal(\"https://swapi.dev/api/people/\");\r",
+							"    pm.expect(jsonData.planets).to.equal(\"https://swapi.dev/api/planets/\");\r",
+							"    pm.expect(jsonData.films).to.equal(\"https://swapi.dev/api/films/\");\r",
+							"    pm.expect(jsonData.species).to.equal(\"https://swapi.dev/api/species/\");\r",
+							"    pm.expect(jsonData.vehicles).to.equal(\"https://swapi.dev/api/vehicles/\");\r",
+							"    pm.expect(jsonData.starships).to.equal(\"https://swapi.dev/api/starships/\");\r",
+							"})\r",
+							"\r",
+							"//6. Status code is 200\r",
+							"pm.test(\"Status code is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"//7. Stasus message is ok\r",
+							"pm.test(\"Stasus message is ok\", function() {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"})\r",
+							"\r",
+							"//8. Response time is less than 1000ms\r",
+							"pm.test(\"Response time is less than 1000ms\", function() {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"})\r",
+							"\r",
+							"//9. There is a specific header in the response\r",
+							"pm.test(\"There is a specific header in the response\", function() {\r",
+							"    pm.response.to.have.header(\"Content-Type\")\r",
+							"})\r",
+							"\r",
+							"//10. The response has a specific header with a specific value\r",
+							"pm.test(\"The response has a specific header with a specific value\", function() {\r",
+							"    pm.response.to.be.header(\"Content-Type\", \"application/json\");\r",
+							"})\r",
+							"\r",
+							"//11. Cookie exists\r",
+							"pm.test(\"Cookie exists\", function() {\r",
+							"    pm.cookies.has(\"Name cookie\")\r",
+							"})\r",
+							"\r",
+							"//12. Cookie has value\r",
+							"pm.test(\"Cookie has value\", function() {\r",
+							"    try{\r",
+							"        var MY_COOKIE = pm.cookies.get(\"name cookie\");\r",
+							"        console.log(MY_COOKIE);\r",
+							"    } catch(e) {\r",
+							"        console.log(\"SOME PROBLEM WITH COOKIE ->\" + e)\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

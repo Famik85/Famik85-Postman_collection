@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "444c59ae-3c78-4a0b-aefc-e358fbed18b9",
+		"name": "Point",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "api account register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"Ratest@1\",\r\n  \"password\": \"Ratest1$\",\r\n  \"confirmPassword\": \"Ratest1$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.helppointapitest.online/api/account/register",
+							"protocol": "https",
+							"host": [
+								"www",
+								"helppointapitest",
+								"online"
+							],
+							"path": [
+								"api",
+								"account",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api Account Register Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"registrationInfo\": {\r\n    \"email\": \"Ratest@1c\",\r\n    \"password\": \"Ratest1$c\",\r\n    \"confirmPassword\": \"Ratest1$c\"\r\n  },\r\n  \"profile\": {\r\n    \"firstName\": \"client\",\r\n    \"middleName\": \"client\",\r\n    \"lastName\": \"1$c\",\r\n    \"phoneNumber\": \"0970001122\",\r\n    \"contactEmail\": \"Ratest@1c\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.helppointapitest.online/api/account/register/client",
+							"protocol": "https",
+							"host": [
+								"www",
+								"helppointapitest",
+								"online"
+							],
+							"path": [
+								"api",
+								"account",
+								"register",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Api Account Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"treikeicaroizu-7683@yopmail.com\",\r\n  \"password\": \"123Aa321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.helppointapitest.online/api/account/login",
+							"protocol": "https",
+							"host": [
+								"www",
+								"helppointapitest",
+								"online"
+							],
+							"path": [
+								"api",
+								"account",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/account/register/expert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"registrationInfo\": {\r\n    \"email\": \"Ratest@1e\",\r\n    \"password\": \"Ratest1$e\",\r\n    \"confirmPassword\": \"Ratest1$e\"\r\n  },\r\n  \"profile\": {\r\n    \"welcomeMessage\": \"string\",\r\n    \"title\": \"Тест\",\r\n    \"paymentReference\": \"https://dou.ua\",\r\n    \"aboutMe\": \"string\",\r\n    \"rate\": 0,\r\n    \"specialization\": {\r\n      \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n      \"yearsOfExperience\": 1\r\n    },\r\n    \"skills\": [\r\n      {\r\n        \"skillId\": \"3b256521-51cb-4713-9931-c6c8b13a641c\",\r\n        \"yearsOfExperience\": 1\r\n      }\r\n    ],\r\n    \"firstName\": \"string\",\r\n    \"middleName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"phoneNumber\": \"097\",\r\n    \"contactEmail\": \"Ratest@1e\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.helppointapitest.online/api/account/register/expert",
+							"protocol": "https",
+							"host": [
+								"www",
+								"helppointapitest",
+								"online"
+							],
+							"path": [
+								"api",
+								"account",
+								"register",
+								"expert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://www.helppointapitest.online/api/account/login/facebook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"facebookToken\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.helppointapitest.online/api/account/login/facebook",
+							"protocol": "https",
+							"host": [
+								"www",
+								"helppointapitest",
+								"online"
+							],
+							"path": [
+								"api",
+								"account",
+								"login",
+								"facebook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Get",
+			"item": [
+				{
+					"name": "https://www.helppointapitest.online/swagger/api/Skills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.helppointapitest.online/api/Skills",
+							"protocol": "https",
+							"host": [
+								"www",
+								"helppointapitest",
+								"online"
+							],
+							"path": [
+								"api",
+								"Skills"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
